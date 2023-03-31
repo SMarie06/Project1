@@ -63,17 +63,17 @@ public class Player extends NeveraDullMoment {
 
 	public Player () {} // this will be my player constructor. I will be calling this in my main method
 
-	
+	// Method to update the character's potential points
 	public void updatePotential(int amount) {
 		this.potential = amount;
 	}
 
-	
+	// Method to update the character's competence points
 	public void updateCompetence(int amount) {
 		this.competence = amount;
 	}
 
-	
+	// Method to update the character's honesty points
 	public void updateHonesty(int amount) {
 		this.honesty = amount;
 	}

@@ -92,12 +92,12 @@ public class NeveraDullMoment {
 			System.out.print(" Do you want to play again? (Y/N): ");
 			String response = in.nextLine();
 
-			
+			// Check the player's input to determine if they want to play again
 			if (response.equalsIgnoreCase("Y")) {
-				
+				// Restart the game
 				System.out.println(" Restarting game...");
 			} else if (response.equalsIgnoreCase("N")) {
-				
+				// End the game
 				System.out.println(" Thank you for playing Never a Dull Moment. See you again soon!");
 				restart = false;
 			} else {

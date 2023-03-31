@@ -6,7 +6,7 @@ public class TheScenes extends NeveraDullMoment {
 
 	public static void scenario(Scanner in) { // This will be pulling the scanner from my main method in the NeveraDullMomentClass
 
-		System.out.println(" Scenario "); 
+		System.out.println(" Scenario ");  // look into possibly shortening the scene or changing it
 		System.out.println(" You have been working as an accounting clerk at BG&C Accounting. You have just been told of a potential promotion. "
 				+ " You'll be responsible for preparing spreadsheets, reviewing financial statements, and assisting with audits with the"
 				+ " occasional last- minute tasks. As you settle into your new role, you realize the importance of attention to detail"
@@ -71,13 +71,12 @@ public class TheScenes extends NeveraDullMoment {
 
 				yourReport = true;
 			} else {
-				
 				System.out.println(" Invalid input. Please select 1, 2 or 3"); 
 			}
 
 		}
 
-		// Needed a way to calculate the points per scenario using the starting values as a baseline
+		//	Needed a way to calculate the points per scenario using the starting values as a baseline
 		System.out.println(" Current Potential points are... " + SelectedEmployee.getPotential());
 		System.out.println(" Current Competence points are... " + SelectedEmployee.getCompetence());
 		System.out.println(" Current Honesty points are... " + SelectedEmployee.getHonesty());
@@ -211,8 +210,8 @@ public class TheScenes extends NeveraDullMoment {
 		return SelectedEmployee;	 
 	}
 
-	public static Player farewellLunch(Scanner in, Player SelectedEmployee) {
-		
+	public static Player farewellLunch(Scanner in, Player SelectedEmployee) {// if I change this to an event method, does it meet the requirement?
+		// Print the scenario
 		System.out.println(" The Farewell Lunch ");
 
 		System.out.println();
@@ -226,6 +225,7 @@ public class TheScenes extends NeveraDullMoment {
 
 		System.out.println();
 
+		// Print the answer choices
 		boolean theLunch  =false;
 		while (!theLunch) {
 
@@ -303,9 +303,9 @@ public class TheScenes extends NeveraDullMoment {
 						+ " the weekend. You become totally distracted and forget to figure out what is wrong with the report. The supervisor never gets "
 						+ " the corrected report. ");
 
-				SelectedEmployee.setPotential(SelectedEmployee.getPotential() -6); 
-				SelectedEmployee.setCompetence(SelectedEmployee.getCompetence() +3); 
-				SelectedEmployee.setHonesty(SelectedEmployee.getHonesty() +1); 
+				SelectedEmployee.setPotential(SelectedEmployee.getPotential() -6); // subtract 6 from potential score
+				SelectedEmployee.setCompetence(SelectedEmployee.getCompetence() +3); // subtract 7 from competence score
+				SelectedEmployee.setHonesty(SelectedEmployee.getHonesty() +1); // subtract 9 from honesty score
 
 				theMoney = true;
 			} else if (money.equals("2")) {   
@@ -342,10 +342,10 @@ public class TheScenes extends NeveraDullMoment {
 
 	public static int futurePosition(Scanner in, Player SelectedEmployee) {
 		System.out.print(" After review of your performance, we have decided ..");
-		
-		// This should calculate to add the total amount of points over the 5 scenes and what your total score is
+		//  this calculates to end the game to determine what your outcome is
+		//	This should calculate to add the total amount of points over the 5 scenes and what your total score is
 		int total = SelectedEmployee.getPotential() +  SelectedEmployee.getCompetence() + SelectedEmployee.getHonesty();
-		// This uses the score from above to determine what your outcome is
+
 		if (total >= 0 && total <= 23) { 
 			System.out.println(" You need to find other employment."+ total);
 
